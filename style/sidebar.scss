@@ -1,0 +1,32 @@
+@import "variables";
+@import "@material/elevation/_mixins.scss";
+
+#sidebar {
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  @include mdc-elevation(1);
+  @media screen and (min-width: 960px) {
+    // This width calculation needs to be mirrored in the width calc for #map
+    width: calc(450px + 5%);
+  }
+  @media screen and (max-width: 959px) {
+    width: 100%;
+  }
+  #primary-menu {
+    height: calc(100% - 64px);
+    width: 100%;
+    transition: all 200ms ease-in-out;
+    overflow: hidden;
+    background-color: red;
+  }
+  #secondary-menu {
+    height: calc(100% - 64px);
+    width: 100%;
+    //position: relative;
+    transform: translate(100%, -100%);
+    transition: all 200ms ease-in-out;
+    overflow: hidden;
+    background-color: green;
+  }
+}

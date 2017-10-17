@@ -1,0 +1,54 @@
+$mdc-theme-primary: #990E0B;
+$mdc-theme-secondary: #F1D57C;
+$mdc-theme-background: #f3f3f1;
+
+@import "authbox";
+@import "@material/typography/_mixins.scss";
+@import "@material/button/mdc-button.scss";
+@import "@material/tabs/mdc-tabs.scss";
+
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Cinzel Regular'), local('Cinzel-Regular'), url('./assets/cinzel-reduced.woff2');
+}
+
+html {
+  @include mdc-typography-base;
+}
+
+body {
+  & > section {
+    min-height: 100%;
+    padding: 0 15px;
+    &:first-of-type {
+      background: no-repeat center center;
+      background-size: cover;
+      background-image: linear-gradient(45deg, $mdc-theme-background, transparent), url('./assets/angelo.jpg');
+    }
+    h1 {
+      margin: 0;
+      line-height: 1em;
+      font-family: Cinzel, serif;
+      text-align: center;
+      font-weight: 500;
+      font-size: calc(1.5rem + 8.5vmin);
+      color: $mdc-theme-primary;
+      span {
+        display: block;
+        font-size: calc(1.25rem + 2vmin);
+        line-height: 1em;
+      }
+    }
+    p {
+      @include mdc-typography(body1);
+      //@include mdc-theme-prop(color, text-primary-on-background);
+      text-align: justify;
+    }
+  }
+  & > header {
+    position: sticky;
+  }
+}
+

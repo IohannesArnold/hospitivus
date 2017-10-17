@@ -1,0 +1,12 @@
+@import "sidebar";
+@import "~leaflet/dist/leaflet.css";
+
+main {
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+  // This width calculation needs to be mirrored in the width calc for #sidebar
+  width: calc(95% - 450px);
+}

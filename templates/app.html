@@ -1,0 +1,25 @@
+<:Window bind:innerWidth='viewWidth'/>
+<Sidebar />
+{{#if viewWidth >= 960}}
+<Leaflet />
+{{/if}}
+<script>
+  import Leaflet from './leaflet.html';
+  import Sidebar from './sidebar.html';
+
+  export default {
+    data () {
+      return {
+        allUsers: [],
+        focusedUser: null,
+        showSettings: false,
+        showSecondaryMenu: false,
+        listenClick: false
+      };
+    },
+    components: {
+      Leaflet,
+      Sidebar,
+    }
+  }
+</script>

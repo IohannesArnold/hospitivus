@@ -1,0 +1,38 @@
+<ul class="mdc-list">
+  <li class="mdc-list-item">
+    <span class="mdc-list-item__text">
+      Nomen
+      <span class="mdc-list-item__text__secondary">
+        {{user.firstName}} {{user.lastName}}
+      </span>
+    </span>
+  </li>
+  <li class="mdc-list-item">
+    <span class="mdc-list-item__text">
+      Utrum Possis Alios Accipere Domi
+      <span class="mdc-list-item__text__secondary">
+        {{#if user.hosting === "YES"}}Haud Dubie
+        {{elseif user.hosting === "NO"}}Non Nunc, Pro Dolor
+        {{else}}Forsitan
+        {{/if}}
+      </span>
+    </span>
+  </li>
+  <li class="mdc-list-item">
+    <span class="mdc-list-item__text">
+      Movere Fibulam Personae Tuae
+    </span>
+  </li>
+  {{#if chromeA2HS}}
+  <li class="mdc-list-item">
+    <span class="mdc-list-item__text">
+      Depromere Hospitivum in Telephonum Gestabile Tuum
+    </span>
+  </li>
+  {{/if}}
+  <li class="mdc-list-item">
+    <span class="mdc-list-item__text">
+      Gratiae Hospitivi
+    </span>
+  </li>
+</ul>

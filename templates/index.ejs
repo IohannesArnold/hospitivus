@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="la">
+  <head>
+    <script>
+      if (localStorage.getItem('graphcoolToken')) {
+        location.assign('/colloquia');
+      }
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+      <section>
+        <h1>
+          Hospitivus
+          <span>
+            aedes retiales ad hospitium latinum comunicandum
+          </span>
+        </h1>
+        <div id="auth-box">
+          <div class="social-login">
+            <button id="login-button-facebook" class="mdc-button mdc-button--compact">
+              Personam Induere cum Facebook
+            </button>
+            <button id="login-button-google-oauth2" class="mdc-button">
+              Personam Induere cum Google
+            </button>
+            <button id="login-button-vkontakte" class="mdc-button">
+              Personam Induere cum VK
+            </button>
+          </div>
+          <div class="email-login">
+            <nav id="email-login-tab-bar" class="mdc-tab-bar">
+              <a class="mdc-tab mdc-tab--active">Nova Persona</a>
+              <a class="mdc-tab">Vetus Persona</a>
+              <span class="mdc-tab-bar__indicator"></span>
+            </nav>
+            <form id="email-login-form">
+              <div class="mdc-textfield">
+                <input class="mdc-textfield__input" type="text" name="firstname"
+                       autocomplete="given-name" required>
+                <label class="mdc-textfield__label" for="firstname">
+                  Praenomen(-mina)
+                </label>
+              </div>
+              <div class="mdc-textfield">
+                <input class="mdc-textfield__input" type="text" name="lastname"
+                       autocomplete="family-name" required>
+                <label class="mdc-textfield__label" for="lastname">
+                  Cognomen(-mina)
+                </label>
+              </div>
+              <div class="mdc-textfield">
+                <input class="mdc-textfield__input" type="email" name="email"
+                       autocomplete="email" required>
+                <label class="mdc-textfield__label" for="email">
+                  Inscriptio Electronica
+                </label>
+              </div>
+              <div class="mdc-textfield">
+                <input class="mdc-textfield__input"
+                       type="password" autocomplete="new-password" name="password"
+                       required>
+                <label class="mdc-textfield__label" for="password">
+                  Cifrae Clavis
+                </label>
+              </div>
+              <div class="mdc-textfield">
+                <input class="mdc-textfield__input"
+                       type="password" autocomplete="new-password" name="passconf"
+                       required>
+                <label class="mdc-textfield__label" for="passconf">
+                  Cifrae Clavis Bis
+                </label>
+              </div>
+              <button name="submit" type="submit"
+                      class="mdc-button mdc-button--compact">
+                Personam Constringere
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+        <header class="mdc-toolbar">
+          <div class="mdc-toolbar__row">
+            <section class="mdc-toolbar__section">
+              <h2 class="mdc-toolbar__title">Interrogata</h2>
+            </section>
+          </div>
+        </header>
+      <section id="faq">
+        <p>
+          Inter recentissimos annos, fontes latinae paene ubique pari visae sunt -
+          Circuli Latini, Conventicula, Rusticationes - ne omittantur opera excelsissima
+          Accademiae Vivarii Novi, Universitatis Kentuciensis, Instituti Poleos,
+          Instituti Paeideici, et multorum aliorum. Latinitatis fautorum numero sic
+          crescente, noniam omnes qui arti latine loquendi operam dant omnes alios
+          cognoscere possunt. Nunc haud dubie fieri potest ut multi cultores latini
+          in eadem urbe habitent neque animadvertant alios illic cohabitare.
+          Quin etiam, sunt qui manibus pedibusque accipiant hospites quibus linguam
+          latinam exercere possint, sed instrumento egeant quo possunt divulgare
+          suam domum esse latine loquentibus apertam. Hae aedes retiales igitur
+          erectae sunt ad has duas fines: Prior, ut eae serviant linguam latinam
+          sicut <a href="https://pasportaservo.org/" target="_blank" rel="noopener">
+          Pasporta Servo</a> adiuvit linguam esperantam - hospitando peregrinos
+          qui colunt eandem linguam. Altera, ut per eas plures latinitatis
+          hortatores possent invenire vicinos eiusdem suasionis,
+          unde oriantur et plures circuli latini.
+        </p>
+        <h3>Qui fecerunt has aedes? Qui eas sustinent?</h3>
+        <p>
+          Iohannes Arnoldus, Academiae Vivarii Novi socius anno 2012-13,
+          est artifex singulus harum aedium.
+          Nunc saltem, Hospitivus non est sub aegide instituti cuiuslibet.
+          Fortasse hoc mutabit.
+        </p>
+      </section>
+  </body>
+</html>

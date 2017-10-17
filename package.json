@@ -1,0 +1,63 @@
+{
+  "name": "hosptivus",
+  "description": "A Hospitality Exchange Website for Latin Revivalists",
+  "version": "0.1.0",
+  "author": "John Arnold",
+  "license": "MIT",
+  "scripts": {
+    "dev-build": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@material/button": "^0.7.0",
+    "@material/elevation": "^0.1.12",
+    "@material/tabs": "^0.3.1",
+    "@material/textfield": "^0.4.1",
+    "@material/toolbar": "^0.4.11",
+    "leaflet": "^1.2.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^1.1.4",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "svelte": "^1.40.2",
+    "svelte-loader": "^2.1.0",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.5.3",
+    "webpack": "^3.6.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
+    }
+  }
+}

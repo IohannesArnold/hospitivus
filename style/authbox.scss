@@ -1,0 +1,78 @@
+@import "~@material/textfield/mdc-textfield.scss";
+@import "@material/elevation/_mixins.scss";
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+#auth-box {
+  @media screen and (max-width: 916px) {
+    margin: auto;
+    position: relative;
+  }
+  @media screen and (min-width: 917px) {
+    width: 825px;
+    position: absolute;
+    right: 2.5vw;
+    bottom: 2.5vw;
+  }
+  min-height: 300px;
+  background: white;
+  @include mdc-elevation(1);
+  border-radius: 2px;
+  transition: max-height 200ms ease-in-out;
+  .email-login {
+    box-sizing: border-box;
+    form {
+      padding: 0 15px 15px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 60%;
+      height: 100%;
+    }
+    .mdc-textfield {
+      animation: fadeIn ease-in 1;
+      animation-fill-mode:forwards;
+      animation-duration:200ms;
+      opacity: 0;
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+    }
+    .mdc-button {
+      //@include mdc-theme-prop(background-color, primary);
+      //@include mdc-theme-prop(color, text-primary-on-primary);
+    }
+  }
+  .social-login {
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    @media screen and (min-width: 768px) {
+      width: 40%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      /*background-image: url(./illuminated.jpg);
+      background-position-x: center;
+      background-repeat: no-repeat;
+      background-size: cover; */
+    }
+    .mdc-button {
+      color: #fff;
+      @media screen and (max-width: 768px) {
+        margin-bottom: 20px;
+      }
+      &#login-button-facebook {
+        background: #32508E;
+      }
+      &#login-button-vkontakte {
+        background: #507299;
+      }
+      &#login-button-google-oauth2 {
+        background: #DD4B39;
+      }
+    }
+  }
+}
